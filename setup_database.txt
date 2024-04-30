@@ -1,0 +1,27 @@
+To connect the app to a postgreSQL database, you need to create the database, create two tables, and add the paramaters from below.
+
+1: psql -U postgres
+2: CREATE DATABASE passwordManager;
+
+3: CREATE TABLE accounts (   ##Creates table to allow users store passwords and account information
+id SERIAL PRIMARY KEY,
+username VARCHAR(255),
+password VARCHAR(255) NOT NULL, 
+email VARCHAR (255) NOT NULL, 
+site_name VARCHAR(255) NOT NULL, 
+url VARCHAR(255) NOT NULL,
+created_at TIMESTAMP NOT NULL,
+last_login TIMESTAMP,
+salt BYTEA
+);
+
+4: CREATE TABLE users (     ##Used for app registration
+id SERIAL PRIMARY KEY,
+username VARCHAR(255) UNIQUE NOT NULL,
+password VARCHAR(255) NOT NULL,
+created_at TIMESTAMP NOT NULL,
+last_login TIMESTAMP
+salt BYTEA
+secretkey BYTEA
+
+);
