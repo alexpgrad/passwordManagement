@@ -57,6 +57,7 @@ Account Setup and App Navigation
 7. You can add account information by clicking the ‘+ New Password’ button in the top right corner. Currently, you need to close and re-run the program for any changes to be reflected in the UI table.
 
 Suggestion for Future Work
+
 One of my main motivations was to create a secure password manager. Many of the projects with similar scope do not implement MFA, and some even store passwords in plain-text. I would like to continue working on this project to make it even more secure. We could try SQL injection attacks, use stronger hashing methods, implement limiting mechanisms to prevent brute force attacks. 
 Additionally, I would like to further enhance the UI. There is potential to add more button functionality (currently the buttons on the sidebar do not do anything). Moreover, while customtkinter provide great flexibility and was easy to use, we could explore other python libraries to see how we can make the app look sleek and modern. However, the current implementation for the UI is a great start. Similar projects on github lack a UI for their password manager and rely on command prompts– or have very simple UIs with only two entries for a username and password. 
 Lastly, I am happy to provide this code as an open-source project so that others can continue working on and testing the app. In doing so, people or small companies can have a foundation to develop their own password manager with features like MFA, encryption/decryption, and more.
